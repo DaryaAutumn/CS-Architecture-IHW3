@@ -64,10 +64,10 @@ end_read_buffer:
 	close_file(s0)
 	
 	# add \0 to the end of file contents
-	mv t0 s3
-	add t0 t0 s6 
-	addi t0 t0 1
-	sb zero (t0)
+	mv a1 s3
+	add a1 a1 s6 
+	addi a1 a1 1
+	sb zero (a1)
 	
 	mv a0 s3
 	mv a1 s6
