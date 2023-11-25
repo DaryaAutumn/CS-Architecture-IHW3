@@ -21,9 +21,24 @@
 4. Обработка данных, полученных из файла сформирована в виде отдельной подпрограммы в файле [search_descending_sequence.asm](search_descending_sequence.asm).
 5. В подкаталоге [tests](\tests) присутствуют файлы, используемые для тестирования.
 6. Буфер для ввода текста динамически расширяется в зависимости от длины файла ([read_file.asm](read_file.asm)), каждая "порция" буфера имеет размер 512 байт.
+   
    ![image](https://github.com/DaryaAutumn/CS-Architecture-IHW3/assets/72216853/76c60c44-8b43-4276-958d-6f7eb7b6609c)
 
 ### На оценку 6-7
+1. Внутри функций необходимо используются переменные временных регистров, поскольку переменных не так много, и нет необходимости задействовать стек.
+   
+     ![image](https://github.com/DaryaAutumn/CS-Architecture-IHW3/assets/72216853/812c54bb-2c9f-43d9-970a-0b7a1b333973)
+   ![image](https://github.com/DaryaAutumn/CS-Architecture-IHW3/assets/72216853/374c374d-488e-43aa-950f-197352966039)
+
+
+2. Для чтения текста из файла реализован буфер ограниченного размера, равного 512 байтам, благодаря чему программа может читать большие файлы. Логика чтения описана в подпрограмме [read_file](read_file.asm)
+3. Ввод данных, обработка и их вывод организованы с помощью подпрограмм [read_file](read_file.asm), [search_descending_sequence](search_descending_sequence.asm) и [write_to_file](write_to_file.asm) соответственно. Для передачи параметров используются регистры a0-a2, как и для возврата значений.
+
+   ![image](https://github.com/DaryaAutumn/CS-Architecture-IHW3/assets/72216853/c1680f4a-2850-4d45-879a-ef91982c2212)
+   ![image](https://github.com/DaryaAutumn/CS-Architecture-IHW3/assets/72216853/d803b514-4131-43b4-8ed8-5618c23787ba)
+   ![image](https://github.com/DaryaAutumn/CS-Architecture-IHW3/assets/72216853/741f5998-a962-4b67-9ac4-f5909b1d3b43)
+
+
 ### На оценку 8
 ### На оценку 9
 ### На оценку 10
