@@ -5,15 +5,11 @@ test1: 	.asciz "tests/test1.txt"
 test2: 	.asciz "tests/test2.txt"
 test3: 	.asciz "tests/test3.txt"
 test4: 	.asciz "tests/test4.txt"
-test5: 	.asciz "tests/test5.txt"
-test6: 	.asciz "tests/test6.txt"
 
 output1:	.asciz "outputs/output1.txt"
 output2:	.asciz "outputs/output2.txt"
 output3:	.asciz "outputs/output3.txt"
 output4:	.asciz "outputs/output4.txt"
-output5:	.asciz "outputs/output5.txt"
-output6:	.asciz "outputs/output6.txt"
 
 .global test_subprogramm
 .text
